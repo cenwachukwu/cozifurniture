@@ -1,0 +1,25 @@
+{
+  "name": "cozifurniture",
+  "version": "1.0.0",
+  "description": "This is an eCommerce website for cozifurniture store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cenwachukwu/cozifurniture.git"
+  },
+  "author": "Chiebuka Nwachukwu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cenwachukwu/cozifurniture/issues"
+  },
+  "homepage": "https://github.com/cenwachukwu/cozifurniture#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.2"
+  }
+}
