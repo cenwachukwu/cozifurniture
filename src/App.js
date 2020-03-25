@@ -6,7 +6,7 @@ const App = () => {
   return (
     <React.StrictMode>
       <div className="App">
-        <p>Cozi Furniture</p>
+        <p>Room Sofas</p>
         <Router></Router>
       </div>
     </React.StrictMode>

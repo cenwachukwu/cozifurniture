@@ -30955,7 +30955,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var App = function App() {
   return /*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/_react.default.createElement("p", null, "Cozi Furniture"), /*#__PURE__*/_react.default.createElement(_router.Router, null)));
+  }, /*#__PURE__*/_react.default.createElement("p", null, "Room Sofas"), /*#__PURE__*/_react.default.createElement(_router.Router, null)));
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
