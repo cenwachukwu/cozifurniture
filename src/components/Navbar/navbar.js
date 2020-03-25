@@ -7,17 +7,25 @@ const Navbar = () => {
     <div className="Navbar">
       <div className="navContainer">
         <div>
-          <a>Logo</a>
+          <a>Room Sofas</a>
         </div>
-        <ul>
-          <li>
-            <a>About me</a>
-          </li>
-          <li></li>
-          <li>
-            <a>contact me</a>
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li></li>
+            <li>
+              <a>Recliners</a>
+            </li>
+            <li>
+              <a>Sectionals</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Account</li>
+            <li>Cart</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
