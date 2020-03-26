@@ -4,6 +4,7 @@ import Carrousel from '../components/Carrousel/carrousel';
 import Pills from '../components/HomePagePills/pills';
 import loveseat from '../utils/pillBackground/livingRoom.jpg';
 import PillBox from '../components/NavbarButtons/navbarButtons';
+import Footer from '../components/Footer/footer';
 
 const Home = (props) => {
   return (
@@ -11,6 +12,7 @@ const Home = (props) => {
       <Navbar />
       <Carrousel />
       <PillBox />
+      <Footer />
     </div>
   );
 };
