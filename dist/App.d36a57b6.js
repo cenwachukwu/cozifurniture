@@ -31162,7 +31162,9 @@ var Navbar = function Navbar() {
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./navbar.scss":"components/Navbar/navbar.scss","@reach/router":"../node_modules/@reach/router/es/index.js","../DropDown/dropdown":"components/DropDown/dropdown.js"}],"pages/Home.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./navbar.scss":"components/Navbar/navbar.scss","@reach/router":"../node_modules/@reach/router/es/index.js","../DropDown/dropdown":"components/DropDown/dropdown.js"}],"utils/pics.jpg":[function(require,module,exports) {
+module.exports = "/pics.aba23f82.jpg";
+},{}],"pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31174,17 +31176,25 @@ var _react = _interopRequireDefault(require("react"));
 
 var _navbar = _interopRequireDefault(require("../components/Navbar/navbar"));
 
+var _pics = _interopRequireDefault(require("../utils/pics.jpg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Home = function Home() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "Home"
-  }, /*#__PURE__*/_react.default.createElement(_navbar.default, null));
+  }, /*#__PURE__*/_react.default.createElement(_navbar.default, null), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    title: "tempImg",
+    alt: "Cozi Sofa",
+    src: _pics.default
+  }))));
 };
 
 var _default = Home;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../components/Navbar/navbar":"components/Navbar/navbar.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../components/Navbar/navbar":"components/Navbar/navbar.js","../utils/pics.jpg":"utils/pics.jpg"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
