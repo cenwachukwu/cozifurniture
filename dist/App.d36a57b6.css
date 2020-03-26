@@ -1,13 +1,10 @@
 .Navbar {
   font-size: 1.8rem;
   font-weight: 100;
-  margin-bottom: 1rem;
   padding: 5rem;
   width: 100%;
   height: 3.7rem;
-  position: sticky;
   top: 0;
-  z-index: 1;
   border-bottom: 0.5px solid black;
   background-color: white;
 }
@@ -133,6 +130,17 @@ a:hover {
 }
 .dropdown-itemList.active {
   display: block;
+}
+.tempCarrouselPic {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30rem;
+}
+.tempCarrouselPic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=/App.d36a57b6.css.map */

@@ -1,16 +1,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar/navbar';
-import tempPics from '../utils/pics.jpg';
+import Carrousel from '../components/Carrousel/carrousel';
 
 const Home = () => {
   return (
     <div className="Home">
       <Navbar />
-      <div>
-        <a href="#">
-          <img title="tempImg" alt="Cozi Sofa" src={tempPics} />
-        </a>
-      </div>
+      <Carrousel />
     </div>
   );
 };
