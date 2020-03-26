@@ -31199,7 +31199,86 @@ var Carrousel = function Carrousel() {
 
 var _default = Carrousel;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./carrousel.scss":"components/Carrousel/carrousel.scss","../../utils/pics.jpg":"utils/pics.jpg"}],"pages/Home.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./carrousel.scss":"components/Carrousel/carrousel.scss","../../utils/pics.jpg":"utils/pics.jpg"}],"components/HomePagePills/pills.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/HomePagePills/pills.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./pills.scss");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Pills = function Pills(props) {
+  console.log(props.props);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "Pills"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: props.props
+  }));
+};
+
+var _default = Pills;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./pills.scss":"components/HomePagePills/pills.scss"}],"utils/pillBackground/livingRoom.jpg":[function(require,module,exports) {
+module.exports = "/livingRoom.bb8588e8.jpg";
+},{}],"components/NavbarButtons/navbarButtons.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/NavbarButtons/navbarButtons.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./navbarButtons.scss");
+
+var _pills = _interopRequireDefault(require("../HomePagePills/pills"));
+
+var _livingRoom = _interopRequireDefault(require("../../utils/pillBackground/livingRoom.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PillBox = function PillBox() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "PillBox"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "boxPills"
+  }, /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default
+  }), /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default
+  }), /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default
+  }), /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default
+  }), /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "extraPill"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Shop all Room Sofa deals")))));
+};
+
+var _default = PillBox;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./navbarButtons.scss":"components/NavbarButtons/navbarButtons.scss","../HomePagePills/pills":"components/HomePagePills/pills.js","../../utils/pillBackground/livingRoom.jpg":"utils/pillBackground/livingRoom.jpg"}],"pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31213,17 +31292,23 @@ var _navbar = _interopRequireDefault(require("../components/Navbar/navbar"));
 
 var _carrousel = _interopRequireDefault(require("../components/Carrousel/carrousel"));
 
+var _pills = _interopRequireDefault(require("../components/HomePagePills/pills"));
+
+var _livingRoom = _interopRequireDefault(require("../utils/pillBackground/livingRoom.jpg"));
+
+var _navbarButtons = _interopRequireDefault(require("../components/NavbarButtons/navbarButtons"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function Home() {
+var Home = function Home(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "Home"
-  }, /*#__PURE__*/_react.default.createElement(_navbar.default, null), /*#__PURE__*/_react.default.createElement(_carrousel.default, null));
+  }, /*#__PURE__*/_react.default.createElement(_navbar.default, null), /*#__PURE__*/_react.default.createElement(_carrousel.default, null), /*#__PURE__*/_react.default.createElement(_navbarButtons.default, null));
 };
 
 var _default = Home;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../components/Navbar/navbar":"components/Navbar/navbar.js","../components/Carrousel/carrousel":"components/Carrousel/carrousel.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../components/Navbar/navbar":"components/Navbar/navbar.js","../components/Carrousel/carrousel":"components/Carrousel/carrousel.js","../components/HomePagePills/pills":"components/HomePagePills/pills.js","../utils/pillBackground/livingRoom.jpg":"utils/pillBackground/livingRoom.jpg","../components/NavbarButtons/navbarButtons":"components/NavbarButtons/navbarButtons.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
