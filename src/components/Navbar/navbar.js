@@ -1,30 +1,41 @@
 import React from 'react';
 import './navbar.scss';
 import { Link } from '@reach/router';
+import Dropdown from '../DropDown/dropdown';
 
 const Navbar = () => {
   return (
     <div className="Navbar">
       <div className="navContainer">
-        <div>
-          <a>Room Sofas</a>
+        <div className="logo">
+          <a href="#">Room Sofas</a>
         </div>
-        <div>
-          <ul>
-            <li></li>
-            <li>
-              <a>Recliners</a>
-            </li>
-            <li>
-              <a>Sectionals</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>Account</li>
-            <li>Cart</li>
-          </ul>
+
+        <ul className="navbarCategoryLinks">
+          <li>
+            <Dropdown />
+          </li>
+          <li>
+            <a href="#">Recliners</a>
+          </li>
+          <li>
+            <a href="#">Sectionals</a>
+          </li>
+        </ul>
+
+        <div className="navbarUserLinks">
+          <div>
+            <a href="#">
+              <i className="fas fa-shopping-cart"></i>
+              <p>cart</p>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <i className="far fa-user"></i>
+              <p>account</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>

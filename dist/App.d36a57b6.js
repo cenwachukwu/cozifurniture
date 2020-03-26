@@ -31009,7 +31009,112 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Navbar/navbar.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/DropDown/dropdown.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/DropDown/dropdown.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+require("./dropdown.scss");
+
+var _router = require("@reach/router");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Dropdown = function Dropdown() {
+  var data = ['Sofa', 'Love Seat', 'Chair'];
+  var activatorRef = (0, _react.useRef)(null);
+  var dropdownListRef = (0, _react.useRef)(null);
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isOpen = _useState2[0],
+      setIsOpen = _useState2[1];
+
+  var clickHandler = function clickHandler(e) {
+    setIsOpen(!isOpen);
+  };
+
+  var keyHandler = function keyHandler(e) {
+    console.log(e.code); // Code for esc is 27
+
+    if (e.code === 27 && isOpen) {
+      setIsOpen(false);
+    }
+  }; //   if what the user is clicking isnt in the dropdown, close the dropdown
+
+
+  var clickOutsideHandler = function clickOutsideHandler(e) {
+    //   event.target
+    if (dropdownListRef.current.contains(event.target) || activatorRef.current.contains(event.target)) {
+      return;
+    }
+
+    setIsOpen(false);
+  }; //   we'll use useEffect toggled with isOpen to send focus to the first element in the dropdown
+  //   we'll also use it to be able to close the dropdown by clicking outside of it. we will achieve this using a document.addEventListener
+
+
+  (0, _react.useEffect)(function () {
+    if (isOpen) {
+      dropdownListRef.current.querySelector('a').focus();
+      document.addEventListener('mousedown', clickOutsideHandler);
+    } else {
+      // if it's not open and to prevent a memory leak, we remove eventListener
+      document.removeEventListener('mousedown', clickOutsideHandler);
+    }
+  }, [isOpen]);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "dropdown-wrap",
+    onKeyUp: keyHandler
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    "aria-haspopup": "true",
+    "aria-controls": "dropdown1",
+    onClick: clickHandler,
+    ref: activatorRef,
+    className: "dropdown-activator"
+  }, "Living Room"), /*#__PURE__*/_react.default.createElement("ul", {
+    id: "dropdown1",
+    ref: dropdownListRef // we now say if isOpen is true, we want to add an active class but if its false, dont add a class
+    ,
+    className: "dropdown-itemList ".concat(isOpen ? 'active' : '') // adding role="list" helps us make sure that assistive technology eg screen readers will annouce how many items are in the list
+    ,
+    role: "list"
+  }, data.map(function (item, index) {
+    return /*#__PURE__*/_react.default.createElement("li", {
+      key: index
+    }, /*#__PURE__*/_react.default.createElement("a", {
+      href: "#"
+    }, item));
+  })));
+};
+
+var _default = Dropdown;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./dropdown.scss":"components/DropDown/dropdown.scss","@reach/router":"../node_modules/@reach/router/es/index.js"}],"components/Navbar/navbar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31023,6 +31128,8 @@ require("./navbar.scss");
 
 var _router = require("@reach/router");
 
+var _dropdown = _interopRequireDefault(require("../DropDown/dropdown"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Navbar = function Navbar() {
@@ -31030,12 +31137,32 @@ var Navbar = function Navbar() {
     className: "Navbar"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "navContainer"
-  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", null, "Room Sofas")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", null, "Recliners")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", null, "Sectionals")))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Account"), /*#__PURE__*/_react.default.createElement("li", null, "Cart")))));
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "logo"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Room Sofas")), /*#__PURE__*/_react.default.createElement("ul", {
+    className: "navbarCategoryLinks"
+  }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_dropdown.default, null)), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Recliners")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Sectionals"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "navbarUserLinks"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fas fa-shopping-cart"
+  }), /*#__PURE__*/_react.default.createElement("p", null, "cart"))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "far fa-user"
+  }), /*#__PURE__*/_react.default.createElement("p", null, "account"))))));
 };
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./navbar.scss":"components/Navbar/navbar.scss","@reach/router":"../node_modules/@reach/router/es/index.js"}],"pages/Home.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./navbar.scss":"components/Navbar/navbar.scss","@reach/router":"../node_modules/@reach/router/es/index.js","../DropDown/dropdown":"components/DropDown/dropdown.js"}],"pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
