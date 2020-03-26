@@ -5,7 +5,12 @@ const Pills = (props) => {
   console.log(props.props);
   return (
     <div className="Pills">
-      <img src={props.props} />
+      <a href="#">
+        <img src={props.props} />
+      </a>
+      <div>
+        <a href="#">{props.categoryName}</a>
+      </div>
     </div>
   );
 };

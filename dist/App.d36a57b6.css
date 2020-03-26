@@ -143,11 +143,23 @@ a:hover {
   object-fit: cover;
 }
 .Pills {
-  height: 17rem;
+  height: 19rem;
 }
 .Pills img {
-  height: 100%;
+  height: 80%;
   object-fit: cover;
+}
+.Pills div {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+.Pills div a {
+  text-align: left;
+  color: black;
+}
+.Pills div a:hover {
+  color: #b99053;
 }
 .PillBox {
   margin: 2rem 0;
@@ -167,7 +179,7 @@ a:hover {
   align-items: center;
 }
 .PillBox .extraPill {
-  padding-top: 6rem;
+  padding-top: 7rem;
   width: 95%;
   height: 100%;
   background-color: #a2bbce;

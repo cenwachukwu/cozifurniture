@@ -31222,9 +31222,13 @@ var Pills = function Pills(props) {
   console.log(props.props);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "Pills"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: props.props
-  }));
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, props.categoryName)));
 };
 
 var _default = Pills;
@@ -31260,15 +31264,20 @@ var PillBox = function PillBox() {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "boxPills"
   }, /*#__PURE__*/_react.default.createElement(_pills.default, {
-    props: _livingRoom.default
+    props: _livingRoom.default,
+    categoryName: 'Sofa'
   }), /*#__PURE__*/_react.default.createElement(_pills.default, {
-    props: _livingRoom.default
+    props: _livingRoom.default,
+    categoryName: 'Love Seat'
   }), /*#__PURE__*/_react.default.createElement(_pills.default, {
-    props: _livingRoom.default
+    props: _livingRoom.default,
+    categoryName: 'Chair'
   }), /*#__PURE__*/_react.default.createElement(_pills.default, {
-    props: _livingRoom.default
+    props: _livingRoom.default,
+    categoryName: 'Recliners'
   }), /*#__PURE__*/_react.default.createElement(_pills.default, {
-    props: _livingRoom.default
+    props: _livingRoom.default,
+    categoryName: 'Sectionals'
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "extraPill"
   }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
