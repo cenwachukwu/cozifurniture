@@ -31199,7 +31199,176 @@ var Carrousel = function Carrousel() {
 
 var _default = Carrousel;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./carrousel.scss":"components/Carrousel/carrousel.scss","../../utils/pics.jpg":"utils/pics.jpg"}],"pages/Home.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./carrousel.scss":"components/Carrousel/carrousel.scss","../../utils/pics.jpg":"utils/pics.jpg"}],"components/HomePagePills/pills.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/HomePagePills/pills.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./pills.scss");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Pills = function Pills(props) {
+  console.log(props.props);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "Pills"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: props.props
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, props.categoryName)));
+};
+
+var _default = Pills;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./pills.scss":"components/HomePagePills/pills.scss"}],"utils/pillBackground/livingRoom.jpg":[function(require,module,exports) {
+module.exports = "/livingRoom.bb8588e8.jpg";
+},{}],"components/NavbarButtons/navbarButtons.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/NavbarButtons/navbarButtons.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./navbarButtons.scss");
+
+var _pills = _interopRequireDefault(require("../HomePagePills/pills"));
+
+var _livingRoom = _interopRequireDefault(require("../../utils/pillBackground/livingRoom.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PillBox = function PillBox() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "PillBox"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "boxPills"
+  }, /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default,
+    categoryName: 'Sofa'
+  }), /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default,
+    categoryName: 'Love Seat'
+  }), /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default,
+    categoryName: 'Chair'
+  }), /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default,
+    categoryName: 'Recliners'
+  }), /*#__PURE__*/_react.default.createElement(_pills.default, {
+    props: _livingRoom.default,
+    categoryName: 'Sectionals'
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "extraPill"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Shop all Room Sofa deals")))));
+};
+
+var _default = PillBox;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./navbarButtons.scss":"components/NavbarButtons/navbarButtons.scss","../HomePagePills/pills":"components/HomePagePills/pills.js","../../utils/pillBackground/livingRoom.jpg":"utils/pillBackground/livingRoom.jpg"}],"components/Footer/footer.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Footer/footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./footer.scss");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "Footer"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "Footer-div"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "FooterCategoryDiv"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "FooterCategory"
+  }, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("p", null, "Brands"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Ashley")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Millennium")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Signature Design By Ashley")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Benchcraft")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Sierra Sleep by Ashley")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "FooterCategory"
+  }, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("p", null, "Quick Links"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Delivery Policy")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "About Us")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Financing & Leasing")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Privacy Policy")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Contact Us")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Careers")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "My Account"))))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "FooterIconsDiv"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Home")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    class: "fab fa-facebook-f"
+  })), /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    class: "fab fa-instagram"
+  })), /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    class: "fab fa-youtube"
+  }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
+  }, "Contact Us"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "FooterCopyRightDiv"
+  }, /*#__PURE__*/_react.default.createElement("p", null, "All rights reserved", /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("i", {
+    class: "fas fa-copyright"
+  })), "2020"))));
+};
+
+var _default = Footer;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./footer.scss":"components/Footer/footer.scss"}],"pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31213,17 +31382,25 @@ var _navbar = _interopRequireDefault(require("../components/Navbar/navbar"));
 
 var _carrousel = _interopRequireDefault(require("../components/Carrousel/carrousel"));
 
+var _pills = _interopRequireDefault(require("../components/HomePagePills/pills"));
+
+var _livingRoom = _interopRequireDefault(require("../utils/pillBackground/livingRoom.jpg"));
+
+var _navbarButtons = _interopRequireDefault(require("../components/NavbarButtons/navbarButtons"));
+
+var _footer = _interopRequireDefault(require("../components/Footer/footer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function Home() {
+var Home = function Home(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "Home"
-  }, /*#__PURE__*/_react.default.createElement(_navbar.default, null), /*#__PURE__*/_react.default.createElement(_carrousel.default, null));
+  }, /*#__PURE__*/_react.default.createElement(_navbar.default, null), /*#__PURE__*/_react.default.createElement(_carrousel.default, null), /*#__PURE__*/_react.default.createElement(_navbarButtons.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 };
 
 var _default = Home;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../components/Navbar/navbar":"components/Navbar/navbar.js","../components/Carrousel/carrousel":"components/Carrousel/carrousel.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../components/Navbar/navbar":"components/Navbar/navbar.js","../components/Carrousel/carrousel":"components/Carrousel/carrousel.js","../components/HomePagePills/pills":"components/HomePagePills/pills.js","../utils/pillBackground/livingRoom.jpg":"utils/pillBackground/livingRoom.jpg","../components/NavbarButtons/navbarButtons":"components/NavbarButtons/navbarButtons.js","../components/Footer/footer":"components/Footer/footer.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
